@@ -1,5 +1,9 @@
+const { RuleTester } = require("eslint");
+
 /**
  * Эту функцию трогать не нужно
+ * Необходимо, чтобы на сайте можно было поприветствовать только пользователей,
+которые удовлетворяют следующему условию - *имя не пустое, без пробелов, минимум 4 символа*.
  */
 function print(text) {
   console.log(text);
@@ -10,7 +14,11 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
-  // ваш код...
+  if ( (name === null) || (name.includes(' ')) || (name.length < 4 )) {
+    return false;
+  } else {
+    return true;
+  };
 }
 
 function sayHello() {
