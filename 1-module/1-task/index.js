@@ -6,4 +6,3 @@ function factorial(n) {
   }
   return num;
 }
-
